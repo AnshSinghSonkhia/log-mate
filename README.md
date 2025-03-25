@@ -2,7 +2,7 @@
 **A flexible and powerful logging library for Node.js**  
 log-mate makes logging effortless & powerful—log to console, files, databases, or cloud with structured logs, encryption, real-time streaming, and auto-rotation. It’s plug & play, supports multi-transport logging, and boosts performance with async, lazy logging, and batching. Plus, it keeps your data secure with masking & encryption—perfect for everything from debugging to production!
 
-[![npm](https://img.shields.io/npm/v/log-mate.svg)](https://www.npmjs.com/package/log-mate)  [![License](https://img.shields.io/npm/l/log-mate.svg)](LICENSE)  [![Downloads](https://img.shields.io/npm/dt/log-mate.svg)](https://www.npmjs.com/package/log-mate)  
+[![npm](https://img.shields.io/npm/v/log-mate.svg)](https://www.npmjs.com/package/log-mate)  [![License](https://img.shields.io/npm/l/log-mate.svg)](LICENSE)  [![Downloads](https://img.shields.io/npm/dt/log-mate.svg)](https://www.npmjs.com/package/log-mate) 
 
 ## **📖 Overview**  
 **log-mate** is a lightweight yet feature-rich logging library for Node.js applications. It provides structured logging, multiple log levels, customizable transports (console, file, database, cloud), log rotation, contextual logging, encryption, and real-time log streaming.  

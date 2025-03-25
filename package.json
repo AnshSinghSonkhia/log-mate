@@ -1,0 +1,45 @@
+{
+  "name": "log-mate",
+  "version": "1.0.0",
+  "description": "log-mate makes logging effortless & powerful—log to console, files, databases, or cloud with structured logs, encryption, real-time streaming, and auto-rotation. It’s plug & play, supports multi-transport logging, and boosts performance with async, lazy logging, and batching. Plus, it keeps your data secure with masking & encryption—perfect for everything from debugging to production!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnshSinghSonkhia/log-mate.git"
+  },
+  "keywords": [
+    "log",
+    "logging",
+    "logger",
+    "log-mate",
+    "nodejs-logging",
+    "structured-logging",
+    "debugging",
+    "log-rotation",
+    "log-streaming",
+    "log-levels",
+    "contextual-logging",
+    "error-logging",
+    "console-logger",
+    "log-to-file",
+    "cloud-logging",
+    "log-management",
+    "developer-tools",
+    "observability"
+  ],
+  "author": "Ansh Singh Sonkhia",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/AnshSinghSonkhia/log-mate/issues"
+  },
+  "homepage": "https://github.com/AnshSinghSonkhia/log-mate#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
