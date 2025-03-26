@@ -1,6 +1,6 @@
 {
   "name": "log-mate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "log-mate makes logging effortless & powerful—log to console, files, databases, or cloud with structured logs, encryption, real-time streaming, and auto-rotation. It’s plug & play, supports multi-transport logging, and boosts performance with async, lazy logging, and batching. Plus, it keeps your data secure with masking & encryption—perfect for everything from debugging to production!",
   "main": "index.js",
   "directories": {
