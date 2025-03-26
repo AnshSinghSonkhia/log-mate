@@ -39,6 +39,7 @@ logme.info("Informational message");
 logme.warn("This is a warning!");
 logme.error("Something went wrong!", { code: 500, details: "Internal Server Error" });
 logme.fatal("Critical failure! Shutting down...");
+logme.custom("info", "User logged in"); 
 ```
 
 ### **Logging to a File**  
@@ -49,14 +50,87 @@ logme.info("This will be logged to a file.");
 
 ### **Logging to a Database**  
 ```javascript
-logme.toDatabase({ type: "mongo", uri: "mongodb://localhost:27017/logs" });
-logme.info("This log entry is saved in the database.");
+logme.toDatabase({
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: "logs",
+});
+logme.info("This message will be stored in the database");
+```
+
+### **Logging to Cloud (AWS, GCP, Azure)**
+```js
+logme.toCloud("aws", { bucket: "my-log-bucket" });
+logme.error("Logging error to the cloud");
+```
+
+### **Masking Sensitive Data**
+
+```js
+logme.maskSensitive(["password", "token"]);
+logme.info("User logged in with password: 123456 and token: abcdefg");
+
+// OUTPUT: [INFO] User logged in with password: ****** and token: ******
 ```
 
 ### **Streaming Logs in Real-Time**  
 ```javascript
 logme.enableStreaming(3000); // Streams logs over WebSocket at port 3000
 logme.info("Streaming logs in real-time...");
+```
+
+### **Encrypted Logging**
+
+```js
+logme.encrypt("my-secret-key");
+logme.info("This log is now encrypted!");
+```
+
+### **Batch Logging**
+
+```js
+logme.setBatchSize(5);
+logme.info("Log message 1");
+logme.info("Log message 2");
+logme.flush();  // Manually flush logs before batch size is reached
+```
+### **Log Rotation**
+
+```js
+logme.enableRotation({ maxSize: 1024 * 1024, maxFiles: 3 }); // Rotate at 1MB, keep 3 files
+logme.info("This log will be rotated when it reaches max size");
+```
+
+### **Contextual Logging**
+
+```js
+logme.setContext({ userId: "1234", sessionId: "abcd" });
+logme.info("User performed an action");
+
+// OUTPUT: [INFO] [userId:1234] [sessionId:abcd] User performed an action
+```
+
+### **Namespace (Scoped) Logging**
+
+```js
+const authLogger = logme.get("auth");
+authLogger("INFO", "User logged in");
+// Output: [auth] [INFO] User logged in
+```
+
+### **Using Plugins**
+
+```js
+logme.use((message) => console.log(`[PLUGIN] ${message}`));
+logme.info("This log passes through a plugin");
+```
+
+### **CLI Usage**
+
+```sh
+node index.js view logs.txt      # View log file
+node index.js clear logs.txt     # Clear log file
 ```
 
 ---

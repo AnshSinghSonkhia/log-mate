@@ -16,4 +16,7 @@ async function logToCloud(level, message) {
     });
 }
 
-module.exports = { toCloud, logToCloud }; // Ensure this is correct
+// module.exports = toCloud; // Ensure this is correct
+// module.exports = logToCloud; // Ensure this is correct
+
+module.exports = { toCloud, logToCloud };

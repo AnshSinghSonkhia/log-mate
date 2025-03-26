@@ -18,4 +18,7 @@ function formatLog(level, message, ...args) {
     return `[${level}] ${logObject.timestamp} - ${message} ${args.join(" ")}`;
 }
 
+// module.exports = setFormat;
+// module.exports = formatLog;
+
 module.exports = { setFormat, formatLog };

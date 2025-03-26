@@ -1,6 +1,8 @@
 const { toConsole, logToConsole } = require("../src/toConsole");
 
-jest.spyOn(console, "log").mockImplementation(() => {});
+beforeEach(() => {
+    console.log = jest.fn();
+});
 
 test("should disable console logging", () => {
     toConsole(false);
@@ -11,6 +13,5 @@ test("should disable console logging", () => {
 test("should enable console logging", () => {
     toConsole(true);
     logToConsole("INFO", "Console logging enabled");
-    
     expect(console.log).toHaveBeenCalledWith(expect.stringMatching(/INFO.*Console logging enabled/));
 });
