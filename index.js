@@ -24,6 +24,7 @@ const trace = require("./src/trace");
 const use = require("./src/use");
 const warn = require("./src/warn");
 const { logWithPlugins } = require("./src/plugins");
+const { setConfig, getConfig } = require("./config");
 
 module.exports = {
     cli,
@@ -59,5 +60,7 @@ module.exports = {
     trace,
     use,
     logWithPlugins,
-    warn
+    warn,
+    setConfig,
+    getConfig
 };

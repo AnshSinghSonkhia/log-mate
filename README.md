@@ -207,17 +207,20 @@ node index.js clear logs.txt     # Clear log file
 
 ## **🛠 Configuration Example**  
 ```javascript
+const logme = require("log-mate");
+
 logme.setConfig({
   level: "debug",
+  format: "json",
   transports: [
     { type: "console" },
-    { type: "file", path: "logs/app.log" },
-    { type: "database", uri: "mongodb://localhost:27017/logs" }
+    { type: "file", path: "logs/app.log" }
   ],
-  format: "json",
   maskSensitive: ["password", "email"],
   encrypt: true
 });
+
+console.log(logme.getConfig()); // Check updated config
 ```
 
 ---
